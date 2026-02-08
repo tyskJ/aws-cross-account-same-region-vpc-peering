@@ -139,17 +139,25 @@
 
 後片付け - ローカル -
 =====================================================================
-1. スタック削除
+1. ACCEPTER スタック削除
 ---------------------------------------------------------------------
+.. code-block:: bash
+
+  aws ec2 delete-vpc-peering-connection \
+  --vpc-peering-connection-id PeeringConnectionID \
+  --profile admin_accepter
+
 .. code-block:: bash
 
   rain rm ACCEPTER --profile admin_accepter -y
 
+2. REQUESTER スタック削除
+---------------------------------------------------------------------
 .. code-block:: bash
 
   rain rm REQUESTER --profile admin_requester -y
 
-2. デプロイ用バケット削除
+3. デプロイ用バケット削除
 ---------------------------------------------------------------------
 .. code-block:: bash
 
