@@ -33,11 +33,11 @@
 
 .. code-block:: bash
 
-  aws login --profile admin_requester
+  aws login --profile admin_accepter
 
 .. code-block:: bash
 
-  aws login --profile admin_accepter
+  aws login --profile admin_requester
 
 事前作業(1)
 =====================================================================
