@@ -374,19 +374,19 @@ Outputs:
       --with-decryption --query Parameter.Value \
       --output text --profile admin_accepter > keypair_accepter.pem && chmod 400 keypair_accepter.pem
     Export:
-      Name: get-keypair-command
+      Name: accepter-get-keypair-command
   SshCommand:
     Description: SSH Command Bypass Systems Manager Session Manager
     Value: !Sub |
       ssh -i keypair_accepter.pem ec2-user@${Client} \
       -o ProxyCommand="aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p' --profile admin_accepter"
     Export:
-      Name: ssh-command
+      Name: accepter-client-ssh-command
   AcceptRole:
     Description: Accept IAM Role Arn
     Value: !GetAtt AcceptRole.Arn
     Export:
-      Name: accept-iam-role-arn
+      Name: accepter-iam-role-arn
   AccepterVpcId:
     Description: Accepter VPC ID
     Value: !Ref ClientVpc
@@ -397,3 +397,8 @@ Outputs:
     Value: !Ref ClientPublicSubnetRtb
     Export:
       Name: accepter-route-table-id
+  ClientPrivateIp:
+    Description: EC2 Private IP
+    Value: !GetAtt Client.PrivateIp
+    Export:
+      Name: accepter-client-private-ip

@@ -350,16 +350,21 @@ Outputs:
       --with-decryption --query Parameter.Value \
       --output text --profile admin_requester > keypair_requester.pem && chmod 400 keypair_requester.pem
     Export:
-      Name: get-keypair-command
+      Name: requester-get-keypair-command
   SshCommand:
     Description: SSH Command Bypass Systems Manager Session Manager
     Value: !Sub |
       ssh -i keypair_requester.pem ec2-user@${Client} \
       -o ProxyCommand="aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p' --profile admin_requester"
     Export:
-      Name: ssh-command
+      Name: requester-client-ssh-command
   PeeringConnectionId:
     Description: VPC Peering Conndection ID
     Value: !Ref VpcPeering
     Export:
       Name: vpc-peering-connection-id
+  ClientPrivateIp:
+    Description: EC2 Private IP
+    Value: !GetAtt Client.PrivateIp
+    Export:
+      Name: requester-client-private-ip
