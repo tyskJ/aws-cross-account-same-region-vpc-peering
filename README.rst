@@ -123,6 +123,16 @@
 
   * S3バケット名は必要に応じて修正してください
 
+3. ルート追加 (アクセプタアカウント)
+---------------------------------------------------------------------
+.. code-block:: bash
+
+  aws ec2 create-route \
+  --route-table-id アクセプタアカウントルートテーブルID \
+  --destination-cidr-block 192.168.0.0/16 \
+  --vpc-peering-connection-id PeeringConnectionID \
+  --profile admin_accepter
+
 動作確認
 =====================================================================
 * `詳細 <./envs/README.rst>`_
