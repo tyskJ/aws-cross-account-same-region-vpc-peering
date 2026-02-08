@@ -392,3 +392,8 @@ Outputs:
     Value: !Ref ClientVpc
     Export:
       Name: accepter-vpc-id
+  RouteTableId:
+    Description: Route Table ID
+    Value: !Ref ClientPublicSubnetRtb
+    Export:
+      Name: accepter-route-table-id
