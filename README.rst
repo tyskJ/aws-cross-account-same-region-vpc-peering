@@ -105,6 +105,7 @@
 
   cat <<EOF > config/requester-parameter.yml
   Parameters:
+    AccepterAccountId: アクセプタAWSアカウントID
     AccepterRoleArn: アクセプタAWSアカウントに作成したピアリング承諾用IAMロールARN
     AccepterVpcId: VPC ピアリングするアクセプタAWSアカウントに作成したVPC ID
   EOF
