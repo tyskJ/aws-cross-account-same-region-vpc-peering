@@ -7,8 +7,8 @@
 └── envs
     ├── config
     │   ├── dummy
-    │   ├── requester-parameter.yml     REQUESTER スタック用パラメータファイル (Ignore Git)
-    │   └── accepter-parameter.yml      ACCEPTER スタック用パラメータファイル (Ignore Git)
-    ├── requester.yml                   REQUESTER スタック定義ファイル
-    └── accepter.yml                    ACCEPTER スタック定義ファイル
+    │   ├── accepter-parameter.yml      ACCEPTER スタック用パラメータファイル (Ignore Git)
+    │   └── requester-parameter.yml     REQUESTER スタック用パラメータファイル (Ignore Git)
+    ├── accepter.yml                    ACCEPTER スタック定義ファイル
+    └── requester.yml                   REQUESTER スタック定義ファイル
 ```
