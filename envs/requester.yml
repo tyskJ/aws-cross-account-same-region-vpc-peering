@@ -329,6 +329,9 @@ Resources:
       PeerOwnerId: !Ref AccepterAccountId
       PeerRoleArn: !Ref AccepterRoleArn
       PeerVpcId: !Ref AccepterVpcId
+      Tag:
+        - Key: Name 
+          Value: peering-connection
 
   ClientPublicSubnetRtbRoutePeering:
     Type: AWS::EC2::Route
