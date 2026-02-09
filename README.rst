@@ -178,3 +178,7 @@
 リファレンス
 ---------------------------------------------------------------------
 * `AWS リソースおよびプロパティタイプのリファレンス - Template Reference <https://docs.aws.amazon.com/ja_jp/AWSCloudFormation/latest/TemplateReference/aws-template-resource-type-ref.html>`_
+
+ブログ
+---------------------------------------------------------------------
+* `VPC ピアリング接続時にセキュリティグループの接続元として他 VPC で利用しているセキュリティグループが指定可能か教えてください。 - DevelopersIO <https://dev.classmethod.jp/articles/security-group-source-from-different-vpc/>`_
