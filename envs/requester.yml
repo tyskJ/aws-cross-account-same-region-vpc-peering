@@ -329,7 +329,7 @@ Resources:
       PeerOwnerId: !Ref AccepterAccountId
       PeerRoleArn: !Ref AccepterRoleArn
       PeerVpcId: !Ref AccepterVpcId
-      Tag:
+      Tags:
         - Key: Name 
           Value: peering-connection
 
